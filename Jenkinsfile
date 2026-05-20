@@ -31,6 +31,9 @@ pipeline {
     }
     
     post {
+	 always {
+        junit '**/surefire-reports/*.xml'
+    }
         success {
             echo 'BUILD SUCCESS — All tests passed!'
         }
