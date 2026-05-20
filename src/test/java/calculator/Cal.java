@@ -8,7 +8,7 @@ public class Cal {
 	
 	@Test
     public void testAddition() {
-        int result = 2 + 2;
+        int result = 3 + 2;
         Assert.assertEquals(result, 4);
         System.out.println("Addition Test Passed!");
     }
