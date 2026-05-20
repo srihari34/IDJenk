@@ -23,11 +23,11 @@ pipeline {
         }
         
         stage('Test') {
-            steps {
-                echo 'Running TestNG tests...'
-                bat 'mvn clean test'
-            }
-        }
+    steps {
+        echo "Running suite: ${params.Suite}"
+        bat "mvn clean test -Dsurefire.suiteXmlFiles=${params.Suite}"
+    }
+}
     }
     
     post {
