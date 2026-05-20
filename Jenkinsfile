@@ -2,6 +2,11 @@ pipeline {
   
   agent any
   
+   parameters {
+        string(name: 'Suite', defaultValue: 'testng.xml', description: 'TestNG suite file to run')
+    }
+    
+  
   stages {
        stage('Clone URL')
 	     {
